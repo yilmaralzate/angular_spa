@@ -1,10 +1,14 @@
+// Angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Rutas
-import { APP_ROUTING } from "./app.routes";
+// Rutas
+import { APP_ROUTING } from './app.routes';
 
+// Servicios
+import { HeroesService } from './services/heroes.service';
 
+// Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -23,9 +27,11 @@ import { VideosComponent } from './components/videos/videos.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING //El router debe ir en imports
+    APP_ROUTING // El router debe ir en imports
   ],
-  providers: [],
+  providers: [
+    HeroesService // Aqui deben ir los servicios porque son proveedores de data
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
