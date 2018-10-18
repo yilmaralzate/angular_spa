@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroesService } from '../../services/heroes.service';
+import { HeroesService, Heroe } from '../../services/heroes.service';
+//Para usar el Router de Angular debemos importarlo para usar desde Button
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-heroes',
@@ -8,9 +11,11 @@ import { HeroesService } from '../../services/heroes.service';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes:any[] = [];
+  //Variable a ser exportada para *ngFor
+  heroes:Heroe[] = [];
 
-  constructor(private _heroesService: HeroesService) {
+  constructor(private _heroesService: HeroesService,
+              private _router: Router) {
 
   }
   
@@ -18,7 +23,13 @@ export class HeroesComponent implements OnInit {
   ngOnInit() { 
 
     this.heroes = this._heroesService.getHeroes();
+    console.log(this.heroes);
 
+  }
+
+  //Este llamado se implementa usando el Button en el Html, y se debe importar Router de @angular/router
+  verHeroe( idx:number ) {
+    this._router.navigate(['/heroe',idx]);
   }
 
 }

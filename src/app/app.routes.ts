@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
+
 
 const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -13,7 +15,9 @@ const APP_ROUTES: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'heroes', component: HeroesComponent },
     { path: 'videos', component: VideosComponent },
+    { path: 'heroe/:id', component: HeroeComponent }, //De esta forma se pasa un parametro a la ruta
     { path: '**', component: HomeComponent }, //Si no es encontrada la pagina
+    { path: '#', component: HomeComponent }, //Si no es encontrada la pagina
 
     //{ path: 'path/:routeParam', component: MyComponent },
     //{ path: 'staticPath', component: ... },
