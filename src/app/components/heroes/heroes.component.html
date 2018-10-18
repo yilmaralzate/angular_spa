@@ -1,11 +1,11 @@
-<h1>Heroes</h1>
+<h1>Videos</h1>
 <hr>
 <div class="card-columns">
 
     <!-- El componente que se va a repetir es el que va a contener al *ngFor -->
-    <div class="card" *ngFor="let item of heroes; let i = index">
-        <img class="card-img-top" [src]="item.img" [alt]="item.nombre">
-        <!--img class="card-img-top" src="assets/img/videopreview.png" [alt]="item.nombre"-->
+    <div class="card animated fadeIn fast" *ngFor="let item of heroes; let i = index">
+        <!--img class="card-img-top" [src]="item.img" [alt]="item.nombre"-->
+        <img class="card-img-top" src="assets/img/videopreview.png" [alt]="item.nombre">
         <div class="card-body">
             <h5 class="card-title">{{ item.nombre }}</h5>
             <p class="card-text">{{ item.bio }}</p>

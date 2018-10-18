@@ -1,3 +1,13 @@
-<p>
-  heroe works!
-</p>
+<div class="card mb-3 animated fadeIn fast">
+  <!--img class="card-img-top" [src]="heroe.img" alt="Card image cap"-->
+  <img class="card-img-top" src="assets/img/videopreview.png" alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title">{{ heroe.nombre | uppercase }}&nbsp;<small>( {{ heroe.aparicion | date:'y' }} )</small></h4>
+    <p class="card-text">{{ heroe.bio }}</p>
+    <p class="card-text"><small class="text-muted">Aparicion: {{ heroe.aparicion }}</small></p>
+    <h1 *ngIf="heroe.casa == 'Marvel'">Marvel Heroes</h1>
+    <h1 *ngIf="heroe.casa == 'DC'">DC Comics</h1>
+  </div>
+</div>
+
+<a [routerLink]="[ '/heroes']" class="btn btn-primary"> Regresar </a>

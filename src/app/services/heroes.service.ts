@@ -62,6 +62,11 @@ export class HeroesService {
     getHeroes() {
         return this.heroes;
     }
+
+    getHeroe(idx:number) {
+        //Obtiene el elemento indexado del *array y lo retorna
+        return this.heroes[idx];
+    }
     
 }
 
