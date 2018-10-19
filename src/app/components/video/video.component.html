@@ -1,0 +1,15 @@
+<div class="card mb-3 animated fadeIn fast">
+    <!--img class="card-img-top" [src]="heroe.img" alt="Card image cap"-->
+    <img class="card-img-top" src="assets/img/videopreview.png" alt="Video">
+    <div class="card-body">
+      <h4 class="card-title">{{ video.nombre | uppercase }}</h4>
+      <p class="card-text">{{ video.descripcion }}</p>
+      <p class="card-text"><small class="text-muted">Keywords: {{ video.keywords }}</small></p>
+      <p>Categoría: <b>{{ video.categoria }}</b></p>
+    </div>
+  </div>
+  
+  <a [routerLink]="[ '/videos']" class="btn btn-primary"> Regresar </a>
+  <hr>
+  <br>
+  

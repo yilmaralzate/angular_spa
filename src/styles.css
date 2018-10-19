@@ -3,6 +3,13 @@
     margin-top: 1em;
 }
 
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

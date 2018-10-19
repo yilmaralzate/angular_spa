@@ -24,4 +24,8 @@ export class NavbarComponent implements OnInit {
     this._router.navigate(['/search',dato]);
   }
 
+  buscarVideo( dato:string ) {
+    this._router.navigate( ['/search', dato] );
+  }
+
 }

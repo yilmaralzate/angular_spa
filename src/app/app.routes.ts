@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
 //Se carga con el snippet --> ngrouter
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { VideoComponent } from './components/video/video.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
 
@@ -17,6 +17,7 @@ const APP_ROUTES: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'heroes', component: HeroesComponent },
     { path: 'videos', component: VideosComponent },
+    { path: 'video/:id', component: VideoComponent },
     { path: 'heroe/:id', component: HeroeComponent }, //De esta forma se pasa un parametro a la ruta
     { path: 'search/:criterio', component: SearchComponent }, //De esta forma se pasa un parametro a la ruta
     { path: '**', component: HomeComponent }, //Si no es encontrada la pagina

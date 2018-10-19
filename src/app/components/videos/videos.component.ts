@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { VideosService, Video } from '../../services/videos.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-videos',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideosComponent implements OnInit {
 
-  constructor() { }
+  videos:Video[] = [];
+
+  constructor(private _videosService:VideosService,
+              private _router:Router) { }
 
   ngOnInit() {
+    //Mostrar los videos utilizando el servicio y tenerlo disponible en el array videos
+    this.videos = this._videosService.getVideos();
+    console.log(this.videos);
+  }
+
+  verVideo( ide:number ) {
+    this._router.navigate(['/video',ide]);
   }
 
 }
