@@ -8,6 +8,7 @@ import { VideosComponent } from './components/videos/videos.component';
 import { VideoComponent } from './components/video/video.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
+import { CategoryComponent } from './components/category/category.component';
 
 
 
@@ -20,6 +21,7 @@ const APP_ROUTES: Routes = [
     { path: 'video/:id', component: VideoComponent },
     { path: 'heroe/:id', component: HeroeComponent }, //De esta forma se pasa un parametro a la ruta
     { path: 'search/:criterio', component: SearchComponent }, //De esta forma se pasa un parametro a la ruta
+    { path: 'category/:categoria', component: CategoryComponent },
     { path: '**', component: HomeComponent }, //Si no es encontrada la pagina
     { path: '#', component: HomeComponent }, //Si no es encontrada la pagina
 

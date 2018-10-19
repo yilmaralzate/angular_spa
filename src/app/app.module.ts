@@ -20,6 +20,7 @@ import { VideosComponent } from './components/videos/videos.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { SearchComponent } from './components/search/search.component';
 import { VideoComponent } from './components/video/video.component';
+import { CategoryComponent } from './components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { VideoComponent } from './components/video/video.component';
     VideosComponent,
     HeroeComponent,
     SearchComponent,
-    VideoComponent
+    VideoComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

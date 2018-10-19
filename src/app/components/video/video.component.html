@@ -1,10 +1,15 @@
 <div class="card mb-3 animated fadeIn fast">
     <!--img class="card-img-top" [src]="heroe.img" alt="Card image cap"-->
-    <img class="card-img-top" src="assets/img/videopreview.png" alt="Video">
+    <!--img class="card-img-top" src="assets/img/videopreview.png" alt="Video"-->
+    <!--iframe class="e2e-iframe-untrusted-src" width="100%" height="400px" [src]="sanitizedLink" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe-->
+    <div class="embed-responsive embed-responsive-16by9" >
+    <iframe class="embed-responsive-item"  [src]="sanitizedLink"></iframe>
+    </div>
+
     <div class="card-body">
       <h4 class="card-title">{{ video.nombre | uppercase }}</h4>
       <p class="card-text">{{ video.descripcion }}</p>
-      <p class="card-text"><small class="text-muted">Keywords: {{ video.keywords }}</small></p>
+      <p class="card-text"><small class="text-muted"><b>Keywords:</b> {{ video.keywords }}</small></p>
       <p>Categoría: <b>{{ video.categoria }}</b></p>
     </div>
   </div>

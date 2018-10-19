@@ -1,9 +1,9 @@
-<h1>Todos los videos</h1>
+<h1>Categoría >> <small>{{ categoria }}</small></h1>
 <hr>
 <div class="card-columns">
 
     <!-- El componente que se va a repetir es el que va a contener al *ngFor -->
-    <div class="card animated fadeIn fast" *ngFor="let item of videos; let i = index">
+    <div class="card animated fadeIn fast" *ngFor="let item of videosArray; let i = index">
         <img class="card-img-top" [src]="item.img" [alt]="item.nombre">
         <!--img class="card-img-top" src="assets/img/videopreview.png" [alt]="item.nombre"-->
         <div class="card-body">
@@ -17,4 +17,7 @@
         </div>
     </div>
 
+</div>
+<div *ngIf="flagVacio" class="alert alert-warning" role="alert">
+  No se encontraron videos en la categoría seleccionada.
 </div>
