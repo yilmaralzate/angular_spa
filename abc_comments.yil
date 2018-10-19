@@ -1,0 +1,9 @@
+/*
+@input() --->
+Sirve para pasar datos del padre al hijo en una jerarquia de componentes.
+O sea que se pone en el componente hijo para recibir datos desde el padre
+
+@output() --->
+Sirve para enviar datos al padre en la jerarquia de componentes.
+
+*/
