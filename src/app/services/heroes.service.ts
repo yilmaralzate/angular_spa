@@ -56,7 +56,7 @@ export class HeroesService {
     ];
 
     constructor() {
-        // Nada por ahora
+        console.log("Servicio listo");
     }
 
     getHeroes() {
@@ -66,6 +66,19 @@ export class HeroesService {
     getHeroe(idx:number) {
         //Obtiene el elemento indexado del *array y lo retorna
         return this.heroes[idx];
+    }
+
+    buscarHeroe( criterio:string) {
+        let heroesArr:Heroe[] = [];
+        criterio = criterio.toLowerCase();
+
+        for (let iterator of this.heroes) {
+            let nombre = iterator.nombre.toLowerCase();
+            if(nombre.indexOf(criterio) >= 0) {
+                heroesArr.push( iterator );
+            }
+        }
+        return heroesArr;
     }
     
 }

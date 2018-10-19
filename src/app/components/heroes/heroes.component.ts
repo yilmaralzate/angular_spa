@@ -19,10 +19,10 @@ export class HeroesComponent implements OnInit {
 
   }
   
-  //Se utiliza cuando la pagina está lista para ser utilizada por alguna servicio o algun componente u otro...
+  //Se utiliza cuando la pagina está lista para ser utilizada por algun servicio o algun componente u otro...
   ngOnInit() { 
 
-    this.heroes = this._heroesService.getHeroes();
+    this.heroes = this._heroesService.getHeroes(); //Para que se listen los heroes en el html
     console.log(this.heroes);
 
   }

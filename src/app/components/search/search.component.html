@@ -1,20 +1,21 @@
-<h1>Videos</h1>
+<h1>Resultados de búsqueda</h1>
+<h4 *ngIf="!flagVacio">Buscando: {{ criterio }}</h4>
 <hr>
 <div class="card-columns">
 
     <!-- El componente que se va a repetir es el que va a contener al *ngFor -->
-    <div class="card animated fadeIn fast" *ngFor="let item of heroes; let i = index">
+    <div class="card animated fadeIn fast" *ngFor="let item of heroesArray; let i = index">
         <img class="card-img-top" [src]="item.img" [alt]="item.nombre">
         <!--img class="card-img-top" src="assets/img/videopreview.png" [alt]="item.nombre"-->
         <div class="card-body">
             <h5 class="card-title">{{ item.nombre }}</h5>
             <p class="card-text">{{ item.bio }}</p>
             <p class="card-text"><small class="text-muted">Aparición: {{ item.aparicion }}</small></p>
-
-            <button (click)="verHeroe( i )" type="button" class="btn btn-outline-primary btn-block">Ver detalle</button>
-            <!-- Otra forma de lanzar una ruta con parametro-->
-            <!--a [routerLink]="[ '/heroe', i ]" class="btn btn-outline-primary btn-block">Ver detalle...</a-->
         </div>
     </div>
-
-</div>
+    
+  </div>
+  
+  <div *ngIf="flagVacio" class="alert alert-warning" role="alert">
+    No se encontraron resultados para la busqueda: '{{ criterio }}'
+  </div>

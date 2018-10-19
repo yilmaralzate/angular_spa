@@ -7,6 +7,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { SearchComponent } from './components/search/search.component';
+
 
 
 const APP_ROUTES: Routes = [
@@ -16,6 +18,7 @@ const APP_ROUTES: Routes = [
     { path: 'heroes', component: HeroesComponent },
     { path: 'videos', component: VideosComponent },
     { path: 'heroe/:id', component: HeroeComponent }, //De esta forma se pasa un parametro a la ruta
+    { path: 'search/:criterio', component: SearchComponent }, //De esta forma se pasa un parametro a la ruta
     { path: '**', component: HomeComponent }, //Si no es encontrada la pagina
     { path: '#', component: HomeComponent }, //Si no es encontrada la pagina
 
