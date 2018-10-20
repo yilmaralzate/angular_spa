@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { VideosService, Video } from '../../services/videos.service';
 
 
@@ -17,7 +17,8 @@ export class SearchComponent implements OnInit {
   criterio:string;
 
   constructor( private activatedRoute: ActivatedRoute,
-              private _videosService:VideosService) {
+              private _videosService:VideosService,
+              private _router:Router) {
 
     this.activatedRoute.params.subscribe( data => {
 
@@ -41,4 +42,9 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
 
   }
+
+  verVideo( ide:number ) {
+    this._router.navigate(['/video',ide]);
+  }
+
 }
