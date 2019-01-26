@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
+import { vids } from './array.videos';
+
 
 @Injectable()
 export class VideosService {
 
+    private videos: Video[] = vids;
+    /*
     private videos: Video[] = [
         {
             id: 1,
@@ -65,6 +69,7 @@ export class VideosService {
             keywords: "nuevo,cliente,registrar,cuenta nueva,nuevo cliente,nueva venta"
         }
     ];
+    */
 
     constructor() {
         console.log('Servicio videos, listo!');

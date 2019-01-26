@@ -45,6 +45,6 @@ export class RoutesClass {
 */
 
 //Forma de exportar la const para ser usada por el modulo principal app.module
-export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES); 
+//export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES);  //activar
 
-//export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true }); 
+export const APP_ROUTING = RouterModule.forRoot(APP_ROUTES, { useHash: true }); //useHash para las rutas y no hacer configuraciones del .htaccess
